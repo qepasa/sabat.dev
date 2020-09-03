@@ -1,7 +1,22 @@
 {% extends "base.html" %}
-{% block title %}Home Page{% endblock %}
+
+{% block head %}
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+	<head>Sabat.dev</head>
+{% endblock %}
+
 {% block content %}
 <div class="title">
-    <h1>Homepage test</h1>
+	<div class="big">
+		<p>This site is under construction</p>
+	</div>
+	
+	<p>Most (if not all) features are not final</p>
+	</br>
+	<p>Made using pure Html, CSS, JS</p>
+	</br>
+	<p>CONTACT</p>
+	<p><a href="https://github.com/Cloud11665" target="_blank">github</a></p>
+	<p><a href="https://steamcommunity.com/id/Cloud2137" target="_blank">steam</a></p>
 </div>
 {% endblock %}
