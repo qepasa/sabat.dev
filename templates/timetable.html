@@ -1,0 +1,138 @@
+{% extends "base.html" %} {% block head %}
+<link
+	rel="stylesheet"
+	href="{{ url_for('static', filename='css/timetable.css') }}"
+/>
+<head>
+	Timetable
+</head>
+{% endblock %} {% block content %}
+<h1>Test plan lekcji</h1>
+
+<table border="1" cellspacing="0" width="100%">
+	<thead>
+		<tr>
+			<th></th>
+			<th>
+				<center>
+					<p class="lower">0</p>
+					<p>7:10-7:55</p>
+				</center>
+			</th>
+			<th>
+				<center>
+					<p class="lower">1</p>
+					<p>7:10-7:55</p>
+				</center>
+			</th>
+			<th>
+				<center>
+					<p class="lower">2</p>
+					<p>7:10-7:55</p>
+				</center>
+			</th>
+			<th>
+				<center>
+					<p class="lower">3</p>
+					<p>7:10-7:55</p>
+				</center>
+			</th>
+			<th>
+				<center>
+					<p class="lower">4</p>
+					<p>7:10-7:55</p>
+				</center>
+			</th>
+			<th>
+				<center>
+					<p class="lower">5</p>
+					<p>7:10-7:55</p>
+				</center>
+			</th>
+			<th>
+				<center>
+					<p class="lower">6</p>
+					<p>7:10-7:55</p>
+				</center>
+			</th>
+			<th>
+				<center>
+					<p class="lower">7</p>
+					<p>7:10-7:55</p>
+				</center>
+			</th>
+			<th>
+				<center>
+					<p class="lower">8</p>
+					<p>7:10-7:55</p>
+				</center>
+			</th>
+			<th>
+				<center>
+					<p class="lower">9</p>
+					<p>7:10-7:55</p>
+				</center>
+			</th>
+			<th>
+				<center>
+					<p class="lower">10</p>
+					<p>7:10-7:55</p>
+				</center>
+			</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<tr>
+			<td>Po</td>
+			{% for i in range(11) %}
+				<td>
+					<div class="subject">
+						{{ i }}
+					</div>
+				</td>
+			{% endfor %}
+		</tr>
+		<tr>
+			<td>Wt</td>
+			{% for i in range(11) %}
+				<td>
+					<div class="subject">
+						{{ i }}
+					</div>
+				</td>
+			{% endfor %}
+		</tr>
+		<tr>
+			<td>Śr</td>
+			{% for i in range(11) %}
+				<td>
+					<div class="subject">
+						{{ i }}
+					</div>
+				</td>
+			{% endfor %}
+		</tr>
+		<tr>
+			<td>Cz</td>
+			{% for i in range(11) %}
+				<td>
+					<div class="subject">
+						{{ i }}
+					</div>
+				</td>
+			{% endfor %}
+		</tr>
+		<tr>
+			<td>Pi</td>
+			{% for i in range(11) %}
+				<td>
+					<div class="subject">
+						{{ i }}
+					</div>
+				</td>
+			{% endfor %}
+		</tr>
+	</tbody>
+</table>
+{% endblock %}
