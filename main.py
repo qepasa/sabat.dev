@@ -54,9 +54,10 @@ def replacements():
 			raise ValueError(flask.request.url)
 		klass = klass.upper()
 
-		offset = int(flask.request.args.get('offset'))
-		if not offset:
+		if not flask.request.args.get('offset'):
 			offset = 0
+		else:
+			offset = int(flask.request.args.get('offset'))
 			
 		date_today = datetime.datetime.now() - datetime.timedelta(days=offset)
 		date_today = f"{date_today.year}-{str(date_today.month).rjust(2,'0')}-{str(date_today.day).rjust(2,'0')}"
@@ -307,4 +308,4 @@ def timetable():
 
 
 if __name__ == '__main__':
-	app.run()
+	app.run(debug=True)
