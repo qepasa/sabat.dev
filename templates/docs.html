@@ -1,14 +1,62 @@
 {% extends "base.html" %}
+
 {% block head %}
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/docs.css') }}">
-	<head>Sabat.dev</head>
 {% endblock %}
-{% block title %}sabat.dev API Documentation{% endblock %}
+
 {% block content %}
-<div class="title">
-    <h1 class="big">sabat.dev API Documentation</h1>
-</div>
-<div class="main">
-	
+<div>
+	<div class="title">
+		<h1 class="big">sabat.dev API Documentation</h1>
+
+		<h2>docs (wip)</h2>
+			<code>/api/docs</code>
+
+		<h2>endpoints</h2>
+			<code>/api/timetable?class={class}</code>
+			
+			<p>Returns a nested json object</p>
+				<code>
+{
+	"resp": [
+		[[{}],[{},{}]],
+		[[{}],[{}],],
+		[[{}]],
+		[[{}]],
+		[[{}],[{}],[{}]]
+	],
+	"success": true
+}
+				</code>
+			</br>
+			<p>
+				<code>resp</code> is an array of days <code>monday - 0,... , friday - 4</code>
+				first level is of length 5 and stores all of lessons indexed by starting `time_index`
+				each lesson is a list of objects, containing 
+				<code>"classroom", "color", "date", "day_index", "duration", "subject", "teacher", "time_index"</code>
+				these keys.
+					*when length of a lesson list is >1, then there are parrarel lessons
+
+				`/api/subs?class={class}&offset={offset}`
+				
+					Returns a json object.
+					```json
+					{
+						"resp": [
+							[
+							"(0)", 
+							"Religia - Anulowano"
+							]
+						], 
+						"success": true
+					}
+					```
+					`resp` is an array of changes, where `change[0]` is the `time_index` and `change[1]` is the description.
+
+				legend:
+					`class` - `string` styled e.g. `"1B"` or `"1Hg"`
+					`offset` - `int` negative offset of days e.g. `03.01.2022 + offset=5 = 29.12.2021`
+			</p>
+	</div>
 </div>
 {% endblock %}
