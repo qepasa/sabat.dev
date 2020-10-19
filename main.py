@@ -14,6 +14,7 @@ import re
 import datetime
 import itertools
 import functools
+import os
 
 import requests
 import xmltodict
@@ -97,6 +98,11 @@ def contact():
 @app.route('/login', methods=['POST', 'GET'])
 def login():
 	return flask.render_template('login.html')
+
+@app.route('/dl/agc.zip', methods=['GET'])
+def get_files():
+	return flask.send_from_directory(os.getcwd(), 'agc.zip', as_attachment=True)
+
 
 @app.route('/api/docs', methods=['GET'])
 def docs():
