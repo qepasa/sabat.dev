@@ -99,6 +99,10 @@ def contact():
 def login():
 	return flask.render_template('login.html')
 
+@app.route('/marisa', methods=['GET'])
+def marisa():
+	return flask.send_from_directory(os.getcwd(), 'marisa.mp4', as_attachment=True)
+
 @app.route('/dl/agc.zip', methods=['GET'])
 def get_files():
 	return flask.send_from_directory(os.getcwd(), 'agc.zip', as_attachment=True)
