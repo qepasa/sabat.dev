@@ -131,11 +131,22 @@ main {
 	width: 100vw;
 	height: 5rem;
   }
-  main {margin: 0;}
+  main {
+    margin: 0;
+    word-wrap: break-word;
+  }
 
-  .logo {display: none;}
-  .navbar-nav {flex-direction: row;}
-  .nav-link {justify-content: center;}
+  .logo {
+    background: var(--bg-mid);
+    margin-bottom: 0rem;
+  }
+  .navbar-nav {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .nav-link {
+    justify-content: center;
+  }
 }
 
 /* Large screens */

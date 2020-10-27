@@ -107,11 +107,6 @@ def marisamp4():
 def marisa():
 	return flask.send_from_directory(os.getcwd(), 'marisa.mp4', as_attachment=False)
 
-@app.route('/dl/agc.zip', methods=['GET'])
-def get_files():
-	return flask.send_from_directory(os.getcwd(), 'agc.zip', as_attachment=True)
-
-
 @app.route('/api/docs', methods=['GET'])
 def docs():
 	return flask.render_template('docs.html')
