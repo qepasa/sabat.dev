@@ -112,7 +112,7 @@ def agc():
 	return flask.send_from_directory(os.getcwd(), 'agc.zip', as_attachment=True)
 
 @app.route('/dl/agc.zip', methods=['GET'])
-def agc():
+def agczip():
 	return flask.send_from_directory(os.getcwd(), 'agc.zip', as_attachment=True)
 
 @app.route('/api/docs', methods=['GET'])
