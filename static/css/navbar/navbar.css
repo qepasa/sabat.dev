@@ -124,6 +124,18 @@ main {
 	text-shadow: 0.5px 0.5px 0 #45966e;
 }
 
+a:link {
+	color: var(--accent-light);
+	background-color: transparent;
+	text-decoration: none;
+}
+
+a:hover {
+	color: var(--accent-dark);
+	background-color: transparent;
+	text-decoration: none;
+}
+
 .big {
 	font-size: 5rem;
 	text-shadow: 2px 2px 0 #45966e, 4px 4px 0 #326e50, 6px 6px 0 #2a5e44, 8px 8px 0 #1f4431;
