@@ -181,7 +181,8 @@ def subs():
 			return flask.jsonify({
 				"resp": [],
 				"success":True
-				}), 200	
+				}), 200
+
 	except Exception as error:
 		return flask.jsonify({
 			"error":str(error),
@@ -194,13 +195,14 @@ def timetable():
 	try:
 		klass = flask.request.args.get('class')
 		if str(klass).upper() not in CLASS_KEY.keys():
-			raise ValueError(flask.request.url)
+			raise ValueError(flask.request.u0rl)
 
 		klass = klass.upper()
 
 		today = datetime.date.today()
 		last_monday = today + datetime.timedelta(days=-today.weekday(), weeks=0)
 		next_friday = last_monday + datetime.timedelta(days=4)
+		year = today.year()
 
 		resp = requests.post(
 			URL_TT,
@@ -213,7 +215,7 @@ def timetable():
 				"__args": [
 					None,
 					{
-						"year": 2020,
+						"year": str(year),
 						"datefrom": str(last_monday),
 						"dateto": str(next_friday),
 						"table": "classes",
