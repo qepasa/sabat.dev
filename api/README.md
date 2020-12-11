@@ -63,15 +63,37 @@ The changes are already included in the `/api/tta` endpoint and their only purpo
 
 ```json
 {
-    "success": true,
-    "resp": [
-        [
-        "(0)", 
-        "Religia - Anulowano"
-        ]
-    ]
+	"success": true,
+	"resp": [
+		[
+			"(0)","Religia - Anulowano"
+		]
+	]
 }
 ```  
+
+## Class list
+
+##### Overview
+Get a list of class identifiers.
+
+###### URL
+    /api/cla
+
+###### Response
+A JSON object containing the `resp` list as well as the `success` flag.  
+`resp` is an array of strings representing the individual class id.  
+
+```json
+{
+    "success": true,
+    "resp": [
+        "1A","1B","1C",...,"2Bg","2Cg",...,"3D","3F","3G"
+    ]
+}
+```
+
+
 ### Note
 It is recomended to check whether the call succeed, because when the backend throws an error, the response will look like this:
 ###### Most likely it will be caused by invalid URL arguments
