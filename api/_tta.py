@@ -21,7 +21,7 @@ def timetable():
 		if klass not in CLASS_KEY.keys():
 			return flask.jsonify({"success":False,"error":"b"}), 406
 
-		if not flask.request.args['o']:
+		if 'o' not in flask.request.args.keys():
 			offset = 0
 		else:
 			offset = int(flask.request.args['o'])
@@ -141,7 +141,6 @@ def timetable():
 		return flask.jsonify({"success":True,'resp': resp}), 200
 
 	except Exception as error:
-		throw(error)
 		return flask.jsonify({"success":False,"error":str(error)}), 406
 
 	

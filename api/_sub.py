@@ -1,5 +1,7 @@
 import datetime
 import random
+import math
+
 
 import requests
 import flask
@@ -21,12 +23,12 @@ def substitutions():
 		if klass not in CLASS_KEY.keys():
 			return flask.jsonify({"success":False,"error":""}), 406
 
-		if not flask.request.args['o']:
+		if 'o' not in flask.request.args.keys():
 			offset = 0
 		else:
 			offset = int(flask.request.args['o'])
 		
-		date_today = datetime.datetime.now() + datetime.timedelta(days=offset)
+		date_today = datetime.datetime.now() + offset*datetime.timedelta(days=1)
 		date_today = f"{date_today.year}-{str(date_today.month).rjust(2,'0')}-{str(date_today.day).rjust(2,'0')}"
 
 		resp = requests.post(
@@ -41,7 +43,6 @@ def substitutions():
 				"__gsh": "00000000",
 			},
 		)
-
 		classes = {}
 		resp_html = BeautifulSoup(resp.json()["r"], features="lxml")
 
@@ -69,9 +70,9 @@ def substitutions():
 			resp[key.upper()] = val
 
 		if klass in resp.keys():
-			return flask.jsonify({"success":True,resp: resp[klass.upper()]}), 200
+			return flask.jsonify({"success":True,"resp": resp[klass.upper()]}), 200
 		else:
-			return flask.jsonify({"success":True,resp: []}), 200
+			return flask.jsonify({"success":True,"resp": []}), 200
 
 	except Exception as error:
 		return flask.jsonify({"success":False,"error":str(error)}), 406
