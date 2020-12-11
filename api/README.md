@@ -15,7 +15,7 @@ It mostly consists of RESTful endpoints that i use for my personal / school proj
 Get the timetable of `class` for this week.
 
 ###### URL
-    /api/tt
+    /api/tta
 
 ###### URL parameters
 - `c` - class identifier (example of id: 3F) **(required)**
@@ -44,13 +44,11 @@ when number of elements in `resp[n][k]` is greater than one, it indicates that t
 
 ## Substitutions
 
-### /api/subs?c={class}&
-
 ##### Overview
 Get the timetable of `class` for this week.
 
 ###### URL
-    /api/tt
+    /api/sub
 ###### URL parameters
 - `c` - class identifier (example of id: 3F) **(required)**
 - `ofs` - offset in days from the current date **(optional)**
@@ -61,7 +59,7 @@ A JSON object containing the `resp` list as well as the `success` flag.
 
 `resp` is an array of arrays, where `resp[n][0]` is the time index and `resp[n][1]` is the included status / message.  
 ###### Note
-The changes are already included in the `/api/tt` endpoint and their only purpose is to be printed out in its native format e.g. `"${resp[n][0]}, ${resp[n][1]}"`.
+The changes are already included in the `/api/tta` endpoint and their only purpose is to be printed out in its native format e.g. `"${resp[n][0]}, ${resp[n][1]}"`.
 
 ```json
 {
@@ -79,7 +77,7 @@ It is recomended to check whether the call succeed, because when the backend thr
 ###### Most likely it will be caused by invalid URL arguments
 ```json
 {
-    "error": "https://sabat.dev/api/tt?c=6E",
+    "error": "https://sabat.dev/api/tta?c=6E",
     "success": false
 }
 ```
