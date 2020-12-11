@@ -1,4 +1,4 @@
-<h3 align="center"><img src="https://raw.githubusercontent.com/Cloud11665/sabat.dev/master/static/icon/logo.ico" width="150px"></h3>
+<h3 align="center"><img src="https://raw.githubusercontent.com/Cloud11665/sabat.dev/master/static/icon/logo.ico" width="100px"></h3>
 <h3 align="center">sabat.dev</h3>
 
 <p align="center">
