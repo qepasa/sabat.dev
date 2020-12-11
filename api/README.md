@@ -51,7 +51,7 @@ Get the timetable of `class` for this week.
     /api/sub
 ###### URL parameters
 - `c` - class identifier (example of id: 3F) **(required)**
-- `ofs` - offset in days from the current date **(optional)**
+- `o` - offset in days from the current date **(optional)**
 - `dbg` - debug flag **(optional)**
 
 ###### Response
@@ -90,16 +90,5 @@ A JSON object containing the `resp` list as well as the `success` flag.
     "resp": [
         "1A","1B","1C",...,"2Bg","2Cg",...,"3D","3F","3G"
     ]
-}
-```
-
-
-### Note
-It is recomended to check whether the call succeed, because when the backend throws an error, the response will look like this:
-###### Most likely it will be caused by invalid URL arguments
-```json
-{
-    "error": "https://sabat.dev/api/tta?c=6E",
-    "success": false
 }
 ```
