@@ -31,14 +31,14 @@ Each `lesson` has its `"classroom", "color", "date", "day_index", "duration", "s
 when number of elements in `resp[n][k]` is greater than one, it indicates that there are multiple lessons happening at once.
 ```json
 {
+    "success": true,
     "resp": [
         [[{...}],[{...},{...}]],
         [[{...}],[{...}]],
         [[{...}]],
         [[{...}]],
         [[{...}],[{...}],[{...}]]
-    ],
-    "success": true
+    ]
 }
 ```
 
@@ -65,12 +65,21 @@ The changes are already included in the `/api/tt` endpoint and their only purpos
 
 ```json
 {
+    "success": true,
     "resp": [
         [
         "(0)", 
         "Religia - Anulowano"
         ]
-    ], 
-    "success": true
+    ]
 }
 ```  
+### Note
+It is recomended to check whether the call succeed, because when the backend throws an error, the response will look like this:
+###### Most likely it will be caused by invalid URL arguments
+```json
+{
+    "error": "https://sabat.dev/api/tt?c=6E",
+    "success": false
+}
+```
