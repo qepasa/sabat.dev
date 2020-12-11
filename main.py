@@ -21,55 +21,6 @@ import xmltodict
 from bs4 import BeautifulSoup
 
 
-#def crossdomain(origin=None, methods=None, headers=None, max_age=21600,
-#                attach_to_all=True, automatic_options=True):
-#    """Decorator function that allows crossdomain requests.
-#      Courtesy of
-#      https://blog.skyred.fi/articles/better-crossdomain-snippet-for-flask.html
-#    """
-#    if methods is not None:
-#        methods = ', '.join(sorted(x.upper() for x in methods))
-#    # use str instead of basestring if using Python 3.x
-#    if headers is not None and not isinstance(headers, basestring):
-#        headers = ', '.join(x.upper() for x in headers)
-#    # use str instead of basestring if using Python 3.x
-#    if not isinstance(origin, basestring):
-#        origin = ', '.join(origin)
-#    if isinstance(max_age, datetime.timedelta):
-#        max_age = max_age.total_seconds()
-#    def get_methods():
-#        """ Determines which methods are allowed
-#        """
-#        if methods is not None:
-#            return methods
-#        options_resp = flask.current_app.make_default_options_response()
-#        return options_resp.headers['allow']
-#    def decorator(f):
-#        """The decorator function
-#        """
-#        def wrapped_function(*args, **kwargs):
-#            """Caries out the actual cross domain code
-#            """
-#            if automatic_options and request.method == 'OPTIONS':
-#                resp = flask.current_app.make_default_options_response()
-#            else:
-#                resp = flask.make_response(f(*args, **kwargs))
-#            if not attach_to_all and request.method != 'OPTIONS':
-#                return resp
-#            h = resp.headers
-#            h['Access-Control-Allow-Origin'] = origin
-#            h['Access-Control-Allow-Methods'] = get_methods()
-#            h['Access-Control-Max-Age'] = str(max_age)
-#            h['Access-Control-Allow-Credentials'] = 'true'
-#            h['Access-Control-Allow-Headers'] = \
-#                "Origin, X-Requested-With, Content-Type, Accept, Authorization"
-#            if headers is not None:
-#                h['Access-Control-Allow-Headers'] = headers
-#            return resp
-#        f.provide_automatic_options = False
-#        return functools.update_wrapper(wrapped_function, f)
-#    return decorator
-
 AGENTS = ["Mozilla/5.0 (Windows NT 6.1; WOW64; rv:40.0) Gecko/20100101 Firefox/40.1","Mozilla/5.0 (Windows NT 6.3; rv:36.0) Gecko/20100101 Firefox/36.0","Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10; rv:33.0) Gecko/20100101 Firefox/33.0","Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36","Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2227.1 Safari/537.36","Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2227.0 Safari/537.36",]
 CLASS_ID = {"-1":"3A","-2":"3B","-3":"3C","-4":"3D","-5":"3E","-6":"3F","-7":"3G","-8":"3H","-29":"2A","-30":"2B","-31":"2C","-32":"2D","-33":"2E","-34":"2F","-35":"2G","-36":"2H","-37":"2AG","-38":"2BG","-39":"2CG","-40":"2DG","-41":"2EG","-42":"2FG","-43":"2GG","-44":"2HG","-45":"1A","-46":"1B","-47":"1C","-48":"1D","-49":"1E","-50":"1F","-51":"1G","-52":"1H"}
 CLASS_KEY = {"1A":"-45","1B":"-46","1C":"-47","1D":"-48","1E":"-49","1F":"-50","1G":"-51","1H":"-52","2A":"-29","2AG":"-37","2B":"-30","2BG":"-38","2C":"-31","2CG":"-39","2D":"-32","2DG":"-40","2E":"-33","2EG":"-41","2F":"-34","2FG":"-42","2G":"-35","2GG":"-43","2H":"-36","2HG":"-44","3A":"-1","3B":"-2","3C":"-3","3D":"-4","3E":"-5","3F":"-6","3G":"-7","3H":"-8"}
@@ -114,7 +65,7 @@ def agc():
 
 @app.route('/api/docs', methods=['GET'])
 def docs():
-	return flask.render_template('docs.html')
+	return flask.redirect('https://github.com/Cloud11665/sabat.dev/tree/master/api#api-version-11')
 
 @app.route('/api/subs', methods=['GET'])
 def subs():
@@ -269,16 +220,6 @@ def timetable():
 				'day_index': day_index
 			}
 
-		#days = []
-		#i,j = 0,1
-		#prev_date = resp_json[0]['date']
-		
-		#for obj in resp_json:
-		#	if obj['date'] != prev_date or j==len(resp_json):
-		#		days.append(resp_json[i:j-1])
-		#		prev_date = obj['date']
-		#		i = j
-		#	j += 1
 		days = []
 		for _,y in itertools.groupby(resp_json, lambda x: x['day_index']):
 			days.append(list(y))
@@ -311,137 +252,6 @@ def timetable():
 			}), 406
 
 
-'''
-
-	if day_index - prev_date:
-		days.append(resp_json[i:j])
-		i = j
-		j += 1
-
-	j+=1
-	
-	prev_time = 0
-	subj = [[None]*11]*5
-	print(subj)
-	pprint.pprint(days[0])
-
-	for i,day in enumerate(days):
-		for lesson in day:
-			time_idx = TIME_MAP[lesson['starttime']]
-			if time_idx - prev_time:
-				subj[i][time_idx] = lesson
-			elif isinstance(subj[i][time_idx], (type(None),dict)):
-				subj[i][time_idx] = [subj[i][time_idx]]
-				subj[i][time_idx].append(lesson)
-			else:
-				subj[i][time_idx].append(lesson)
-
-	pprint.pprint(subj[0])
-
-	for day in days:
-		for lesson in day:
-			year_curr, month_curr, day_curr = [int(x) for x in lesson['date'].split('-')]
-			day_index = datetime.date(year_curr, month_curr, day_curr) - last_monday
-			day_index = day_index.days
-
-			hours_start, minutes_start = [int(x) for x in lesson['starttime'].split(':')]
-			hours_stop, minutes_stop = [int(x) for x in lesson['endtime'].split(':')]
-			a = datetime.timedelta(hours=hours_start, minutes=minutes_start)
-			b = datetime.timedelta(hours=hours_stop, minutes=minutes_stop)
-			total_duration = b-a
-			total_duration = total_duration.seconds//60//45
-
-			time_index = TIME_MAP[lesson['starttime']]
-
-			try: duration = int(lesson['durationperiods'])
-			except KeyError:
-				duration = 1
-	
-			node = {
-				'subject': SUBJECT_ID[lesson['subjectid']],
-				'teacher': TEACHER_ID[lesson['teacherids'][0]],
-				'classroom': CLASSROOM_ID[lesson['classroomids'][0]],
-				'color': lesson['colors'][0],
-				'time_index': time_index,
-				'duration': duration
-			}
-	
-			if isinstance(sub[day_index][time_index], dict):
-				sub[day_index][time_index] = [sub[day_index][time_index]]
-				sub[day_index][time_index].append(node)
-			else:
-				sub[day_index][time_index] = node
-
-
-			#print(day_index, time_index)
-			#print(obj['date'], end='  ')
-			#print(obj['starttime'], end='  ')
-			#print(obj['endtime'], end='  ')
-			#print(day_index, time_index)
-			#print(total_duration)
-			#obj['subjectid'] = SUBJECT_ID[obj['subjectid']]
-			#obj['classids'] = CLASS_ID[obj['classids'][0]]
-			#obj['teacherids'] = TEACHER_ID[obj['teacherids'][0]]
-			#obj['classroomids'] = CLASSROOM_ID[obj['classroomids'][0]]
-			#obj['colors'] = obj['colors'][0]
-		#for obj in resp_json:
-		#    datetime.timedelta()
-		#print(sub[0][0])
-		#print(sub[1][0])
-		#print(sub[2][0])
-	'''
-
-
 if __name__ == '__main__':
 	app.run(debug=True)
 
-'''
-docs (wip)
-	`/api/docs`
-
-endpoints:
-	`/api/timetable?class={class}`
-    
-    Returns a nested json object.
-	```json
-    {
-		"resp": [
-			[[{}],[{},{}]],
-			[[{}],[{}],],
-			[[{}]],
-			[[{}]],
-			[[{}],[{}],[{}]]
-		],
-		"success": true
-    }
-	```
-	`resp` is an array of days `monday - 0,... , friday - 4`
-	first level is of length 5 and stores all of lessons indexed by starting `time_index`
-	each lesson is a list of objects, containing 
-	`"classroom", "color", "date", "day_index", "duration", "subject", "teacher", "time_index"3`
-	these keys.
-		*when length of a lesson list is >1, then there are parrarel lessons
-
-	`/api/subs?class={class}&offset={offset}`
-	
-		Returns a json object.
-		```json
-		{
-			"resp": [
-				[
-				"(0)", 
-				"Religia - Anulowano"
-				]
-			], 
-			"success": true
-		}
-		```
-		`resp` is an array of changes, where `change[0]` is the `time_index` and `change[1]` is the description.
-
-	legend:
-		`class` - `string` styled e.g. `"1B"` or `"1Hg"`
-		`offset` - `int` negative offset of days e.g. `03.01.2022 + offset=5 = 29.12.2021`
-
-
-```
-'''
