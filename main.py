@@ -190,12 +190,12 @@ def subs():
 			}), 406
 	
 
-@app.route('/api/timetable', methods=['GET'])
+@app.route('/api/tt', methods=['GET'])
 def timetable():
 	try:
-		klass = flask.request.args.get('class')
+		klass = flask.request.args.get('c')
 		if str(klass).upper() not in CLASS_KEY.keys():
-			raise ValueError(flask.request.u0rl)
+			raise ValueError(flask.request.url)
 
 		klass = klass.upper()
 
