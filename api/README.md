@@ -19,6 +19,7 @@ Get the timetable of `class` for this week.
 
 ###### URL parameters
 - `c` - class identifier (example of id: 3F) **(required)**
+- `o` - offset in weeks from the current date **(optional)**
 - `dbg` - debug flag **(optional)**
 
 ###### Response
