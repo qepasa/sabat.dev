@@ -5,11 +5,14 @@ import itertools
 import requests
 import flask
 import flask.blueprints
+import flask_caching
 
 from api.__vars import *
 
 api = flask.blueprints.Blueprint('tta', __name__, url_prefix='/api')
+cache = flask_caching.Cache(config=CONFIG)
 
+@cache.cached()
 @api.route('/tta', methods=['GET'])
 def timetable():
 	try:

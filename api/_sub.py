@@ -6,11 +6,14 @@ import requests
 import flask
 import flask.blueprints
 from bs4 import BeautifulSoup
+import flask_caching
 
 from api.__vars import *
 
 api = flask.blueprints.Blueprint('sub', __name__, url_prefix='/api')
+cache = flask_caching.Cache(config=CONFIG)
 
+@cache.cached()
 @api.route('/sub', methods=['GET'])
 def substitutions():
 	try:

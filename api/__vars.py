@@ -1,4 +1,5 @@
 import json
+import toml
 
 with open('./api/timetable.json','r', encoding='utf-8') as f:
 	ttconf = json.load(f)
@@ -11,6 +12,9 @@ with open('./api/timetable.json','r', encoding='utf-8') as f:
 with open('./api/agents.json','r', encoding='utf-8') as f:
 	agconf = json.load(f)
 	AGENTS = agconf['AGENTS']
+
+with open('./config.toml', 'r', encoding='utf-8') as f:
+	CONFIG = toml.load(f)
 
 URL_TT = "https://v-lo-krakow.edupage.org/timetable/server/currenttt.js?__func=curentttGetData"
 URL_RP = "https://v-lo-krakow.edupage.org/substitution/server/viewer.js?__func=getSubstViewerDayDataHtml"
