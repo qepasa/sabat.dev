@@ -89,7 +89,7 @@ A JSON object containing the `resp` list as well as the `success` flag.
 {
     "success": true,
     "resp": [
-        "1A","1B","1C",...,"2Bg","2Cg",...,"3D","3F","3G"
+        "1A","1B","1C",...,"2BG","2CG",...,"3D","3F","3G"
     ]
 }
 ```

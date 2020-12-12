@@ -2,7 +2,6 @@ import datetime
 import random
 import math
 
-
 import requests
 import flask
 import flask.blueprints
