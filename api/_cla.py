@@ -10,6 +10,6 @@ cache = flask_caching.Cache(config=CONFIG)
 @cache.cached()
 @api.route('/cla')
 def klasslist():
-	return flask.jsonify({"success":True,"resp":CLASS_KEY.keys()})
+	return flask.jsonify({"success":True,"resp":list(CLASS_KEY.keys())}), 200
 	#There is no good way to do this,
 	#since its all dependent on a lookup table.
