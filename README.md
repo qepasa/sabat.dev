@@ -21,6 +21,9 @@
   <a href="https://www.codefactor.io/repository/github/cloud11665/sabat.dev">
     <img src="https://img.shields.io/codefactor/grade/github/Cloud11665/sabat.dev">
   </a>
+  <a href="https://github.com/Cloud11665/sabat.dev/blob/master/Pipfile.lock">
+    <img src="https://img.shields.io/github/pipenv/locked/python-version/Cloud11665/sabat.dev">
+  </a>
 </p>
 
 <h1>&nbsp;</h1>
