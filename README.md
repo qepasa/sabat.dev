@@ -1,6 +1,5 @@
 <h3 align="center"><img src="https://raw.githubusercontent.com/Cloud11665/sabat.dev/master/static/icon/logo.ico" width="100px"></h3>
 <h3 align="center">sabat.dev</h3>
-
 <p align="center">
   <a href="https://sabat.dev">
     <img src="https://img.shields.io/website?url=https%3A%2F%2Fsabat.dev">
@@ -9,10 +8,9 @@
     <img src="https://img.shields.io/github/workflow/status/Cloud11665/sabat.dev/build?label=Build">
   </a>
   <a href="https://github.com/Cloud11665/sabat.dev/actions">
-    <img src="https://img.shields.io/github/workflow/status/Cloud11665/sabat.dev/test?label=API%20tests">
+    <img src="https://img.shields.io/github/workflow/status/Cloud11665/sabat.dev/test?label=API">
   </a>
 </p>
-
 <p align="center">
   <a href="https://github.com/Cloud11665/sabat.dev/tree/master/api">
     <img src="https://img.shields.io/badge/API%20version-1.1-informational">
