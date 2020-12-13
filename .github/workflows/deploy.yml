@@ -46,33 +46,27 @@ jobs:
         python -m pip install --upgrade pip
         pip install flake8
         pip install -r requirements.txt
+    
+    - name: Start the http server on port 5000
+      run: |
+        python main.py &
 
     - name: TTA test basic
       run: |
-        python main.py &
         pytest ./tests/api/tta_test_basic.py
-        sudo lsof -i:5000 | awk '/python/ {print $2}' | xargs sudo kill -9
 
     - name: TTA test offset
       run: |
-        python main.py &
         pytest ./tests/api/tta_test_offset.py
-        sudo lsof -i:5000 | awk '/python/ {print $2}' | xargs sudo kill -9
 
     - name: SUB test basic
       run: |
-        python main.py &
         pytest ./tests/api/sub_test_basic.py
-        sudo lsof -i:5000 | awk '/python/ {print $2}' | xargs sudo kill -9
 
     - name: SUB test offset
       run: |
-        python main.py &
         pytest ./tests/api/sub_test_basic.py
-        sudo lsof -i:5000 | awk '/python/ {print $2}' | xargs sudo kill -9
 
     - name: CLA test basic
       run: |
-        python main.py &
         pytest ./tests/api/cla_test_basic.py
-        sudo lsof -i:5000 | awk '/python/ {print $2}' | xargs sudo kill -9
