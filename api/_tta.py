@@ -14,7 +14,7 @@ cache = flask_caching.Cache(config=CONFIG)
 
 @cache.cached()
 @api.route('/tta', methods=['GET'])
-def timetable():
+def tta():
 	try:
 		if 'c' in flask.request.args.keys():
 			klass = flask.request.args['c'].upper()

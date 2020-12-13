@@ -15,7 +15,7 @@ cache = flask_caching.Cache(config=CONFIG)
 
 @cache.cached()
 @api.route('/sub', methods=['GET'])
-def substitutions():
+def sub():
 	try:
 		if 'c' in flask.request.args.keys():
 			klass = flask.request.args['c'].upper()
