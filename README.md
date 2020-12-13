@@ -5,6 +5,15 @@
   <a href="https://sabat.dev">
     <img src="https://img.shields.io/website?url=https%3A%2F%2Fsabat.dev">
   </a>
+  <a href="https://github.com/Cloud11665/sabat.dev/actions">
+    <img src="https://img.shields.io/github/workflow/status/Cloud11665/sabat.dev/build?label=Build">
+  </a>
+  <a href="https://github.com/Cloud11665/sabat.dev/actions">
+    <img src="https://img.shields.io/github/workflow/status/Cloud11665/sabat.dev/test?label=API%20tests">
+  </a>
+</p>
+
+<p align="center">
   <a href="https://github.com/Cloud11665/sabat.dev/tree/master/api">
     <img src="https://img.shields.io/badge/API%20version-1.1-informational">
   </a>
@@ -14,8 +23,6 @@
   <a href="https://www.codefactor.io/repository/github/cloud11665/sabat.dev">
     <img src="https://img.shields.io/codefactor/grade/github/Cloud11665/sabat.dev">
   </a>
-  
-<!-- TODO: ADD BADGES -->
 </p>
 
 <h1>&nbsp;</h1>
