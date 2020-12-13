@@ -32,6 +32,7 @@ def projects():
 
 @app.route('/timetable')
 def timetable():
+	return flask.render_template('timetable.html')
 
 @app.route('/contact')
 def contact():
