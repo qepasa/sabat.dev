@@ -162,7 +162,7 @@ a:hover {
 
   .logo {
     background: var(--bg-mid);
-    margin-bottom: 0rem;
+    margin-bottom: 0;
   }
   .navbar-nav {
     flex-direction: row;
@@ -184,7 +184,7 @@ a:hover {
   .navbar:hover {width: 16rem;}
   .navbar:hover .link-text {display: inline;}
   .navbar:hover .logo svg{margin-left: 11rem;}
-  .navbar:hover .logo-text{left: 0px;}
+  .navbar:hover .logo-text{left: 0;}
 }
 
 .theme-icon {
@@ -216,10 +216,6 @@ a:hover {
 	--text-light: #232426;
 	--text-dark: #333335;
 	--text-accent: #45966e;
-}
-
-.title {
-	text-align: center;
 }
 
 .center {
