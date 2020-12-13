@@ -30,6 +30,8 @@ def home():
 def projects():
 	return flask.render_template('projects.html')
 
+@app.route('/timetable')
+def timetable():
 
 @app.route('/contact')
 def contact():
