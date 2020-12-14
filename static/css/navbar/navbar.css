@@ -18,8 +18,9 @@ body::-webkit-scrollbar-thumb {background: var(--accent-light)}
   overflow: hidden;
 }
 
-#root > div > footer > span > div > #text {
-  content: "test";
+#root > div > div > div.MuiBox-root.jss7.jss6 > div:nth-child(2) {
+  bottom: 10rem;
+  font-size: 1;
 }
 
 .jss7 {
@@ -172,7 +173,18 @@ a:hover {
 
 
 /* Small screens */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
+  .jss7 {
+    margin-left: 1rem;
+    transform: scale(1);
+    width: 100vh;/*calc(100vw - 5rem);*/
+  }
+
+  .MuiToolbar-root {
+    margin-left: 0;
+  }
+
+
   .navbar {
 	bottom: 0;
 	width: 100vw;
@@ -203,7 +215,7 @@ a:hover {
 }
 
 /* Large screens */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 700px) {
   .navbar {
 	top: 0;
 	width: 5rem;
