@@ -2,7 +2,8 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<meta name="author" content="Cloud11665"/>
 		<meta name="description" content="Cloud's devlog/blog"/>
@@ -16,7 +17,6 @@
 		<script defer src="{{ url_for('static', filename='js/base.js') }}"></script>
 		<link rel="stylesheet" href="{{ url_for('static', filename='css/navbar/navbar.css') }}"/>
 		<link rel="stylesheet" href="{{ url_for('static', filename='css/navbar/navbar_themes.css') }}"/>
-		<link rel="stylesheet" href="{{ url_for('static', filename='css/navbar/navbar_contacts.css') }}"/>
 		<link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='icon/logo.ico') }}"/>
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand"/>
 		{% block head %}{% endblock %}
@@ -53,7 +53,7 @@
 					</a>
 				</li>
 				<li class="nav-item">
-					<a href="/timetable" class="nav-link">
+					<a href="/timetable#/schedule/1A" class="nav-link">
 						<svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="table" role="img"
 							xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-table fa-w-16 fa-3x">
 							<g class="fa-group">
@@ -68,7 +68,7 @@
 					</a>
 				</li>
 				<li class="nav-item" id="themeButton">
-					<a href="#" class="nav-link">
+					<a href="" class="nav-link">
 						<svg class="theme-icon" id="lightIcon" aria-hidden="true" focusable="false" data-prefix="fad" data-icon="moon-stars" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-moon-stars fa-w-16 fa-7x">
 							<g class="fa-group">
 								<path fill="currentColor" d="M320 32L304 0l-16 32-32 16 32 16 16 32 16-32 32-16zm138.7 149.3L432 128l-26.7 53.3L352 208l53.3 26.7L432 288l26.7-53.3L512 208z" class="fa-secondary"></path>
@@ -86,7 +86,6 @@
 				</li>
 			</ul>
 		</nav>
-
 		<main>
 			{% block content %} {% endblock %}
 		</main>
