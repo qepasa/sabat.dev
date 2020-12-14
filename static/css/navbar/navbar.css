@@ -7,16 +7,40 @@ body {
 	padding: 0;
 }
 
-body::-webkit-scrollbar {width: 0.5rem;}
+body::-webkit-scrollbar {width: 0rem;}
 body::-webkit-scrollbar-track {background: var(--bg-mid)}
 body::-webkit-scrollbar-thumb {background: var(--accent-light)}
 
-main {
+
+.jss19 {
+	color: var(--text-light);
+	background-color: var(--bg-dark);
+  overflow: hidden;
+}
+
+#root > div > footer > span > div > #text {
+  content: "test";
+}
+
+.jss7 {
+  margin-left: 2.5rem;
+  transform: scale(0.9);
+  width: calc(100vw - 5rem);
+}
+
+.MuiToolbar-root {
   margin-left: 5rem;
-  padding: 1rem;
+}
+
+main {
+  /*margin-left: 2rem;*/
+  word-wrap: break-word;
+  overflow-wrap:inherit;
+  overflow-x: hidden;
 }
 
 .navbar {
+  z-index: 10;
   position: fixed;
   background-color: var(--bg-mid);
   transition: width 600ms ease;
@@ -85,6 +109,7 @@ main {
 .fa-primary {color: var(--accent-dark);}
 .fa-secondary {color: var(--accent-light);}
 
+
 .fa-primary,
 .fa-secondary {
   transition: var(--transition-speed);
@@ -128,6 +153,10 @@ a:link {
 	color: var(--accent-light);
 	background-color: transparent;
 	text-decoration: none;
+}
+
+a {
+  color: var(--text-light);
 }
 
 a:hover {
