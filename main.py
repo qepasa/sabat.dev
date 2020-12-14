@@ -26,6 +26,10 @@ app.register_blueprint(api.tta)
 def home():
 	return flask.render_template('home.html')
 
+@app.route('/static/<a>')
+def statics(a):
+	return flask.url_for('/static/'+a)
+
 @app.route('/projects')
 def projects():
 	return flask.render_template('projects.html')
@@ -33,6 +37,7 @@ def projects():
 @app.route('/timetable')
 def timetable():
 	return flask.render_template('timetable.html')
+	#return flask.redirect('/timetable#/schedule/1A')
 
 @app.route('/contact')
 def contact():
