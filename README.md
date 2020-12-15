@@ -1,10 +1,5 @@
 <h3 align="center">
-  <img src="https://raw.githubusercontent.com/Cloud11665/sabat.dev/master/images/name.png" height="25rem">
-  <img src="https://raw.githubusercontent.com/Cloud11665/sabat.dev/master/images/logo.png" height="50rem" style="margin-top:25rem;">
-</h3>
-
-<h2 align="center">
-  sabat.dev
+  <img src="https://raw.githubusercontent.com/Cloud11665/sabat.dev/master/images/head.png" height="75px">
 </h3>
 
 <p align="center">
