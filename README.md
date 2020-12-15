@@ -17,12 +17,18 @@
   <h2></h2>
   <p align="center">
     <a href="">[Installation]</a>
+    &nbsp;
     <a href="">[Deployment]</a>
+    &nbsp;
     <a href="">[Testing]</a>
+    &nbsp;
     <a href="https://github.com/Cloud11665/sabat.dev/blob/master/api/README.md">[API documentation]</a>
+    &nbsp;
     <a href="">[License]</a>
+    &nbsp;
     <a href="">[Contributing]</a>
   </p>
+  <h2></h2>
 </div>
 <!--Markdown only from now on ((`with some exceptions`))-->
 <!--
