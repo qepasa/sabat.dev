@@ -29,9 +29,9 @@
     <a href="https://github.com/Cloud11665/sabat.dev#deployment">[Contributing]</a>
   </p>
   <h2></h2>
-  <p></p>
-  <p></p>
-  <p></p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
 </div>
 <!--Markdown only from now on ((`with some exceptions`))-->
 <!--
