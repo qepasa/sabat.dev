@@ -1,5 +1,5 @@
 <h3 align="center">
-  <img src="https://raw.githubusercontent.com/Cloud11665/sabat.dev/master/images/head.png" height="75px">
+  <img src="https://raw.githubusercontent.com/Cloud11665/sabat.dev/master/images/head.png" height="120px">
 </h3>
 
 <p align="center">
