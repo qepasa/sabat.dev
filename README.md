@@ -33,7 +33,7 @@
     </h3>
   <h2></h2>
   <p>&nbsp;</p>
-  <p align="right">My personal website for hosting my projects <i>(mostly API's)</i> and messing with front-end</p>
+  <p align="center"><cite>My personal website for hosting my projects <i>(mostly API's)</i> and messing with front-end</cite></p>
   <p>&nbsp;</p>
 </div>
 <!--Markdown only from now on ((`with some exceptions`))-->
