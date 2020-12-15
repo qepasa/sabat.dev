@@ -71,17 +71,33 @@ git clone https://github.com/Cloud11665/sabat.dev
 cd ./sabat.dev
 pipenv install
 ```
+&nbsp;  
+&nbsp;  
+&nbsp;  
 
 ## Deployment
-I use nginx, listening to port 5000 and gunicorn to serve the app.
+I use nginx, listening to port 5000 and gunicorn to serve the app.  
+&nbsp;  
 
-* ``` nohup gunicorn --bind 127.0.0.1:5000 wsgi:app </dev/null >/dev/null 2>&1&
-  ```
+When running on something like [GNU screen](https://www.gnu.org/software/screen) or [tmux](https://github.com/tmux/tmux).
+```
+gunicorn --bind 127.0.0.1:5000 wsgi:app
+```
+When running in the background.
+```
+nohup gunicorn --bind 127.0.0.1:5000 wsgi:app </dev/null >/dev/null 2>&1&
+```
+&nbsp;  
+&nbsp;  
+&nbsp;  
 
 ## Testing
 Run the whole API test suite. *(Requires the http server to be running on localhost)*
 ```
 pytest ./tests/*.py
 ```
+&nbsp;  
+&nbsp;  
+&nbsp;  
 
 ## Contributing
