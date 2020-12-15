@@ -14,20 +14,21 @@
       <img src="https://img.shields.io/github/workflow/status/Cloud11665/sabat.dev/test?color=%2345966e&label=API&logo=flask">
     </a>
   </p>
-  <h2></h2>
-  <p align="center">
-    <a href="https://github.com/Cloud11665/sabat.dev#deployment">[Installation]</a>
-    &nbsp;&nbsp;
-    <a href="https://github.com/Cloud11665/sabat.dev#deployment">[Deployment]</a>
-    &nbsp;&nbsp;
-    <a href="https://github.com/Cloud11665/sabat.dev#testing">[Testing]</a>
-    &nbsp;&nbsp;
-    <a href="https://github.com/Cloud11665/sabat.dev/blob/master/api/README.md">[API documentation]</a>
-    &nbsp;&nbsp;
-    <a href="https://github.com/Cloud11665/sabat.dev/blob/master/LICENSE">[License]</a>
-    &nbsp;&nbsp;
-    <a href="https://github.com/Cloud11665/sabat.dev#deployment">[Contributing]</a>
-  </p>
+  <h2>
+    <p align="center">
+      <a href="https://github.com/Cloud11665/sabat.dev#installation">[Installation]</a>
+      &nbsp;&nbsp;
+      <a href="https://github.com/Cloud11665/sabat.dev#deployment">[Deployment]</a>
+      &nbsp;&nbsp;
+      <a href="https://github.com/Cloud11665/sabat.dev#testing">[Testing]</a>
+      &nbsp;&nbsp;
+      <a href="https://github.com/Cloud11665/sabat.dev/blob/master/api/README.md">[API documentation]</a>
+      &nbsp;&nbsp;
+      <a href="https://github.com/Cloud11665/sabat.dev/blob/master/LICENSE">[License]</a>
+      &nbsp;&nbsp;
+      <a href="https://github.com/Cloud11665/sabat.dev#contributing">[Contributing]</a>
+    </p>
+  </h2>
   <h2></h2>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
@@ -51,10 +52,11 @@
 </p>
 -->
 
+## Installation
+
 ## Testing
 
 ## Deployment
 
-## Installation
 
 ## Contributing
