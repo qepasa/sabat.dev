@@ -56,15 +56,15 @@
 
 ## Installation
 Standard python
-```sh
-git pull https://github.com/Cloud11665/sabat.dev
-cd sabat.dev
+```
+git clone https://github.com/Cloud11665/sabat.dev
+cd ./sabat.dev
 python -m pip install -r ./requirements.txt
 ```
 Pipenv
-```sh
-git pull https://github.com/Cloud11665/sabat.dev
-cd sabat.dev
+```
+git clone https://github.com/Cloud11665/sabat.dev
+cd ./sabat.dev
 pipenv install
 ```
 
