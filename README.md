@@ -16,19 +16,22 @@
   </p>
   <h2></h2>
   <p align="center">
-    <a href="">[Installation]</a>
-    &nbsp;
-    <a href="">[Deployment]</a>
-    &nbsp;
-    <a href="">[Testing]</a>
-    &nbsp;
+    <a href="https://github.com/Cloud11665/sabat.dev#deployment">[Installation]</a>
+    &nbsp;&nbsp;
+    <a href="https://github.com/Cloud11665/sabat.dev#deployment">[Deployment]</a>
+    &nbsp;&nbsp;
+    <a href="https://github.com/Cloud11665/sabat.dev#testing">[Testing]</a>
+    &nbsp;&nbsp;
     <a href="https://github.com/Cloud11665/sabat.dev/blob/master/api/README.md">[API documentation]</a>
-    &nbsp;
-    <a href="">[License]</a>
-    &nbsp;
-    <a href="">[Contributing]</a>
+    &nbsp;&nbsp;
+    <a href="https://github.com/Cloud11665/sabat.dev/blob/master/LICENSE">[License]</a>
+    &nbsp;&nbsp;
+    <a href="https://github.com/Cloud11665/sabat.dev#deployment">[Contributing]</a>
   </p>
   <h2></h2>
+  <p></p>
+  <p></p>
+  <p></p>
 </div>
 <!--Markdown only from now on ((`with some exceptions`))-->
 <!--
