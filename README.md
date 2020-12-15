@@ -5,13 +5,13 @@
 
 <p align="center">
   <a href="https://sabat.dev">
-    <img src="https://img.shields.io/website?down_color=critical&down_message=offline&label=website&up_color=success&up_message=online&url=https%3A%2F%2Fsabat.dev">
+    <img src="https://img.shields.io/website?down_color=critical&down_message=offline&logo=icloud&logoColor=ffffff&up_color=45966e&up_message=online&url=https%3A%2F%2Fsabat.dev">
   </a>
   <a href="https://github.com/Cloud11665/sabat.dev/actions">
-    <img src="https://img.shields.io/github/workflow/status/Cloud11665/sabat.dev/build?label=Build">
+    <img src="https://img.shields.io/github/workflow/status/Cloud11665/sabat.dev/build?color=%2345966e&label=build&logo=python&logoColor=ffffff">
   </a>
   <a href="https://github.com/Cloud11665/sabat.dev/actions">
-    <img src="https://img.shields.io/github/workflow/status/Cloud11665/sabat.dev/test?label=API">
+    <img src="https://img.shields.io/github/workflow/status/Cloud11665/sabat.dev/test?color=%2345966e&label=API&logo=flask">
   </a>
 </p>
 
