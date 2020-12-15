@@ -1,10 +1,11 @@
 <div class="head">
   <h3 align="center">
-    <img src="https://raw.githubusercontent.com/Cloud11665/sabat.dev/master/images/head.png" height="120px">
+    <a href="https://github.com/Cloud11665/sabat.dev">
+      <img src="https://raw.githubusercontent.com/Cloud11665/sabat.dev/master/images/head.png" height="120px" alt="SABAT.DEV >>">
     <p>&nbsp;</p>
   </h3>
   <p align="center">
-    <a href="https://sabat.dev">
+    <a href="https://sabat.dev" target="_blank">
       <img src="https://img.shields.io/website?down_color=critical&down_message=offline&logo=icloud&logoColor=ffffff&up_color=45966e&up_message=online&url=https%3A%2F%2Fsabat.dev">
     </a>
     <a href="https://github.com/Cloud11665/sabat.dev/actions">
@@ -54,10 +55,24 @@
 -->
 
 ## Installation
+Standard python
+```sh
+git pull https://github.com/Cloud11665/sabat.dev
+cd sabat.dev
+python -m pip install -r ./requirements.txt
+```
+Pipenv
+```sh
+git pull https://github.com/Cloud11665/sabat.dev
+cd sabat.dev
+pipenv install
+```
+
+## Deployment
+
 
 ## Testing
 
-## Deployment
 
 
 ## Contributing
