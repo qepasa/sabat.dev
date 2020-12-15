@@ -1,5 +1,4 @@
 <h3 align="center">
-  <p>&nbsp;</p>
   <img src="https://raw.githubusercontent.com/Cloud11665/sabat.dev/master/images/head.png" height="120px">
   <p>&nbsp;</p>
 </h3>
