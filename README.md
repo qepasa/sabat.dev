@@ -1,8 +1,15 @@
-<h3 align="center"><img src="https://raw.githubusercontent.com/Cloud11665/sabat.dev/master/static/icon/logo.ico" width="100px"></h3>
-<h3 align="center">sabat.dev</h3>
+<h3 align="center">
+  <img src="https://raw.githubusercontent.com/Cloud11665/sabat.dev/master/images/name.png" height="25rem">
+  <img src="https://raw.githubusercontent.com/Cloud11665/sabat.dev/master/images/logo.png" height="50rem" style="margin-top:25rem;">
+</h3>
+
+<h2 align="center">
+  sabat.dev
+</h3>
+
 <p align="center">
   <a href="https://sabat.dev">
-    <img src="https://img.shields.io/website?url=https%3A%2F%2Fsabat.dev">
+    <img src="https://img.shields.io/website?down_color=critical&down_message=offline&label=website&up_color=success&up_message=online&url=https%3A%2F%2Fsabat.dev">
   </a>
   <a href="https://github.com/Cloud11665/sabat.dev/actions">
     <img src="https://img.shields.io/github/workflow/status/Cloud11665/sabat.dev/build?label=Build">
@@ -11,6 +18,7 @@
     <img src="https://img.shields.io/github/workflow/status/Cloud11665/sabat.dev/test?label=API">
   </a>
 </p>
+
 <p align="center">
   <a href="https://github.com/Cloud11665/sabat.dev/tree/master/api">
     <img src="https://img.shields.io/badge/API%20version-1.1-informational">
@@ -25,10 +33,17 @@
     <img src="https://img.shields.io/github/pipenv/locked/python-version/Cloud11665/sabat.dev">
   </a>
 </p>
-
 <h1>&nbsp;</h1>
+<p>
+  <a href="https://github.com/Cloud11665/sabat.dev/tree/master/api">
+  [API documentation]
+  </a>
+  &emsp;&emsp;
+  <a href="https://github.com/Cloud11665/sabat.dev/blob/master/LICENSE">
+  [License]
+  </a>
+  &emsp;&emsp;
+  <a href="https://github.com/Cloud11665/sabat.dev">
+  []
+</p>
 
-\[[API documentation](https://github.com/Cloud11665/sabat.dev/tree/master/api)]
-&nbsp;&nbsp;
-\[[License](https://github.com/Cloud11665/sabat.dev/blob/master/LICENSE)]
-&nbsp;&nbsp;
