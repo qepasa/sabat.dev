@@ -15,7 +15,6 @@
     </a>
   </p>
   <h2></h2>
-  <h2>
     <p align="center">
       <a href="https://github.com/Cloud11665/sabat.dev#installation">[Installation]</a>
       &nbsp;&nbsp;
@@ -29,7 +28,7 @@
       &nbsp;&nbsp;
       <a href="https://github.com/Cloud11665/sabat.dev#contributing">[Contributing]</a>
     </p>
-  </h2>
+  <h2></h2>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
