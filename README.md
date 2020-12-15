@@ -72,7 +72,9 @@ pipenv install
 
 
 ## Testing
-
-
+Run the whole API test suite *(Requires the http server to be running on localhost)*
+```
+pytest ./tests/api/
+```
 
 ## Contributing
