@@ -1,3 +1,48 @@
+<div class="head">
+  <h3 align="center">
+    <a href="https://github.com/Cloud11665/sabat.dev#----------------">
+      <img src="https://raw.githubusercontent.com/Cloud11665/sabat.dev/master/images/head.png" height="120px" alt="SABAT.DEV >>">
+    <p>&nbsp;</p>
+   </h3>
+  <p align="center">
+    <a href="https://sabat.dev" target="_blank">
+      <img src="https://img.shields.io/website?down_color=critical&down_message=offline&logo=icloud&logoColor=ffffff&up_color=45966e&up_message=online&url=https%3A%2F%2Fsabat.dev" alt="website status">
+    </a>
+    <a href="https://github.com/Cloud11665/sabat.dev/actions?query=workflow%3Abuild">
+      <img src="https://img.shields.io/github/workflow/status/Cloud11665/sabat.dev/build?color=%2345966e&label=build&logo=python&logoColor=ffffff" alt="build status">
+    </a>
+    <a href="https://github.com/Cloud11665/sabat.dev/actions?query=workflow%3AAPI">
+      <img src="https://img.shields.io/github/workflow/status/Cloud11665/sabat.dev/test?color=%2345966e&label=API&logo=flask" alt="api status">
+    </a>
+  </p>
+  <h2></h2>
+    <h3>
+      <p align="center">
+        <a href="https://github.com/Cloud11665/sabat.dev#installation">[Installation]</a>
+        &nbsp;  
+        <a href="https://github.com/Cloud11665/sabat.dev#deployment">[Deployment]</a>
+        &nbsp;  
+        <a href="https://github.com/Cloud11665/sabat.dev#testing">[Testing]</a>
+        &nbsp;  
+        <strong>
+            <a href="https://github.com/Cloud11665/sabat.dev/blob/master/api/README.md">[API documentation]</a>
+        </strong>
+        &nbsp;  
+        <a href="https://github.com/Cloud11665/sabat.dev/blob/master/LICENSE">[License]</a>
+        &nbsp;  
+        <a href="https://github.com/Cloud11665/sabat.dev#contributing">[Contributing]</a>
+      </p>
+    </h3>
+  <h2></h2>
+  <p>&nbsp;</p>
+  <p align="center">
+    <strong>
+      My personal website for hosting my projects <i>(mostly API's)</i> and messing with front-end
+    </strong>
+  </p>
+  <p>&nbsp;</p>
+</div>
+
 # sabat.dev api
 
 ## https://sabat.dev/api/

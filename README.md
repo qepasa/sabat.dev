@@ -76,11 +76,11 @@ I use nginx, listening to port 5000 and gunicorn to serve the app.
 &nbsp;  
 When running on something like [GNU screen](https://www.gnu.org/software/screen) or [tmux](https://github.com/tmux/tmux).
 ```
-gunicorn --bind 127.0.0.1:5000 wsgi:app
+python -m gunicorn --bind 127.0.0.1:5000 wsgi:app
 ```
 When running in the background.
 ```
-nohup gunicorn --bind 127.0.0.1:5000 wsgi:app </dev/null >/dev/null 2>&1&
+nohup python -m gunicorn --bind 127.0.0.1:5000 wsgi:app </dev/null >/dev/null 2>&1&
 ```
 &nbsp;  
 &nbsp;  
