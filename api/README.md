@@ -18,17 +18,17 @@
   <h2></h2>
     <h3>
       <p align="center">
-        <a href="https://github.com/Cloud11665/sabat.dev#installation">[Installation]</a>
+        [<a href="https://github.com/Cloud11665/sabat.dev#installation">Installation</a>]
         &nbsp;  
-        <a href="https://github.com/Cloud11665/sabat.dev#deployment">[Deployment]</a>
+        [<a href="https://github.com/Cloud11665/sabat.dev#deployment">Deployment</a>]
         &nbsp;  
-        <a href="https://github.com/Cloud11665/sabat.dev#testing">[Testing]</a>
+        [<a href="https://github.com/Cloud11665/sabat.dev#testing">Testing</a>]
         &nbsp;  
         [<code><u>API documentation</u></code>]
         &nbsp;  
-        <a href="https://github.com/Cloud11665/sabat.dev/blob/master/LICENSE">[License]</a>
+        [<a href="https://github.com/Cloud11665/sabat.dev/blob/master/LICENSE">License</a>]
         &nbsp;  
-        <a href="https://github.com/Cloud11665/sabat.dev#contributing">[Contributing]</a>
+        [<a href="https://github.com/Cloud11665/sabat.dev#contributing">Contributing</a>]
       </p>
     </h3>
   <h2></h2>
