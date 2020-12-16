@@ -28,20 +28,20 @@ jobs:
 
     - name: TTA test basic
       run: |
-        pytest ./tests/tta_test_basic.py
+        pytest ./tests/test_tta_basic.py
 
     - name: TTA test offset
       run: |
-        pytest ./tests/tta_test_offset.py
+        pytest ./tests/test_tta_offset.py
 
     - name: SUB test basic
       run: |
-        pytest ./tests/sub_test_basic.py
+        pytest ./tests/test_sub_basic.py
 
     - name: SUB test offset
       run: |
-        pytest ./tests/sub_test_basic.py
+        pytest ./tests/test_sub_basic.py
 
     - name: CLA test basic
       run: |
-        pytest ./tests/cla_test_basic.py
+        pytest ./tests/test_cla_basic.py
