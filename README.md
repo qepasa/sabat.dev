@@ -27,9 +27,9 @@
         &nbsp;
         <a href="https://github.com/Cloud11665/sabat.dev/blob/master/api/README.md">[API documentation]</a>
         &nbsp;
-        <a href="https://github.com/Cloud11665/sabat.dev/blob/master/LICENSE">[License]</a>
-        &nbsp;
         <a href="https://github.com/Cloud11665/sabat.dev#contributing">[Contributing]</a>
+        &nbsp;
+        <a href="https://github.com/Cloud11665/sabat.dev#license">[License]</a>
       </p>
     </h3>
   <h2></h2>
@@ -90,11 +90,24 @@ nohup python -m gunicorn --bind 127.0.0.1:5000 wsgi:app </dev/null >/dev/null 2>
 &nbsp;  
 ## Testing
 
-Run the whole API test suite. *(Requires the http server to be running on localhost)*
+To run the whole API test suite. *(Requires the http server to be running on localhost)*
 ```
 python -m pytest .
 ```
+To run a specific test.
+```
+python -m pytest ./tests/{testname}.py
+```
 &nbsp;  
-&nbsp; 
+&nbsp;  
 ## Contributing
 
+1. [Fork](https://github.com/Cloud11665/sabat.dev/fork) this repo
+2. Create your feature branch (`git checkout -b feature/foobar`)
+3. Commit your changes        (`git commit -am 'Add some foobar'`)
+4. Push to the branch         (`git push origin feature/foobar`)
+5. Create a new Pull Request
+
+## License
+
+Distributed under the GNU AGPL license. See [[`LICENSE`]](https://github.com/Cloud11665/sabat.dev/blob/master/LICENSE)
