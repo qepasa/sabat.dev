@@ -73,7 +73,6 @@ cd ./sabat.dev
 pipenv install -r requirements.txt
 ```
 &nbsp;  
-&nbsp;   
 ## Deployment
 > I use NGINX listening to port 5000 and gunicorn to serve the app.  
 
@@ -87,7 +86,6 @@ When running in the background.
 nohup python -m gunicorn --bind 127.0.0.1:5000 wsgi:app </dev/null >/dev/null 2>&1&
 ```
 &nbsp;  
-&nbsp;  
 ## Testing
 
 To run the whole API test suite. *(Requires the http server to be running on localhost)*
@@ -99,7 +97,6 @@ To run a specific test.
 python -m pytest ./tests/{testname}.py
 ```
 &nbsp;  
-&nbsp;  
 ## Contributing
 
 1. [Fork](https://github.com/Cloud11665/sabat.dev/fork) this repo
@@ -108,7 +105,6 @@ python -m pytest ./tests/{testname}.py
 4. Push to the branch &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [`git push origin feature/foobar`]
 5. Create a new Pull Request
 &nbsp;  
-&nbsp; 
 ## License
 
 Distributed under the GNU AGPL license. See \[[LICENSE](https://github.com/Cloud11665/sabat.dev/blob/master/LICENSE)\]
