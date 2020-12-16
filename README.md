@@ -103,12 +103,12 @@ python -m pytest ./tests/{testname}.py
 ## Contributing
 
 1. [Fork](https://github.com/Cloud11665/sabat.dev/fork) this repo
-2. Create your feature branch (`git checkout -b feature/foobar`)
-3. Commit your changes        (`git commit -am 'Add some foobar'`)
-4. Push to the branch         (`git push origin feature/foobar`)
+2. Create your feature branch [`git checkout -b feature/foobar`]
+3. Commit your changes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [`git commit -am 'Add some foobar'`]
+4. Push to the branch &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [`git push origin feature/foobar`]
 5. Create a new Pull Request
 &nbsp;  
 &nbsp; 
 ## License
 
-Distributed under the GNU AGPL license. See [[`LICENSE`]](https://github.com/Cloud11665/sabat.dev/blob/master/LICENSE)
+Distributed under the GNU AGPL license. See \[[LICENSE](https://github.com/Cloud11665/sabat.dev/blob/master/LICENSE)\]
