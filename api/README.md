@@ -6,13 +6,13 @@
    </h3>
   <p align="center">
     <a href="https://sabat.dev" target="_blank">
-      <img src="https://img.shields.io/website?down_color=critical&down_message=offline&logo=icloud&logoColor=ffffff&up_color=45966e&up_message=online&url=https%3A%2F%2Fsabat.dev" alt="website status">
+      <img src="https://img.shields.io/website?down_color=critical&down_message=offline&logo=icloud&logoColor=ffffff&up_color=45966E&up_message=online&url=https%3A%2F%2Fsabat.dev" alt="website status">
     </a>
     <a href="https://github.com/Cloud11665/sabat.dev/actions?query=workflow%3Abuild">
-      <img src="https://img.shields.io/github/workflow/status/Cloud11665/sabat.dev/build?color=%2345966e&label=build&logo=python&logoColor=ffffff" alt="build status">
+      <img src="https://img.shields.io/github/workflow/status/Cloud11665/sabat.dev/build?color=45966E&label=build&logo=python&logoColor=ffffff" alt="build status">
     </a>
     <a href="https://github.com/Cloud11665/sabat.dev/actions?query=workflow%3AAPI">
-      <img src="https://img.shields.io/github/workflow/status/Cloud11665/sabat.dev/test?color=%2345966e&label=API&logo=flask" alt="api status">
+      <img src="https://img.shields.io/github/workflow/status/Cloud11665/sabat.dev/test?color=45966E&label=API&logo=flask" alt="api status">
     </a>
   </p>
   <h2></h2>
@@ -23,8 +23,6 @@
         [<a href="https://github.com/Cloud11665/sabat.dev#deployment">Deployment</a>]
         &nbsp;  
         [<a href="https://github.com/Cloud11665/sabat.dev#testing">Testing</a>]
-        &nbsp;  
-        [<code><u>API documentation</u></code>]
         &nbsp;  
         [<a href="https://github.com/Cloud11665/sabat.dev/blob/master/LICENSE">License</a>]
         &nbsp;  
@@ -40,11 +38,11 @@
     </p>
   <p>&nbsp;</p>
 </div>
-
+<a href="https://github.com/Cloud11665/sabat.dev/tree/master/api">
+    <img src="https://img.shields.io/badge/API%20version-1.1-EF30A1">
+</a>
 
 ## https://sabat.dev/api/
-
-## Api Version: 1.1
 
 ### Overview
 
