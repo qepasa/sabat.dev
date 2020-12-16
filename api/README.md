@@ -39,7 +39,7 @@
   <p>&nbsp;</p>
 </div>
 <a href="https://github.com/Cloud11665/sabat.dev/tree/master/api">
-    <img src="https://img.shields.io/badge/API%20version-1.1-EF30A1">
+    <img src="https://img.shields.io/badge/API%20version-1.1-EF30A1" width="150px">
 </a>
 
 ## https://sabat.dev/api/
