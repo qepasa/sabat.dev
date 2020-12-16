@@ -33,13 +33,11 @@
     </h3>
   <h2></h2>
   <p>&nbsp;</p>
-  <h2>
     <p align="center">
         <strong>
             SABAT.DEV API documentation
         </strong>
     </p>
-  </h2>
   <p>&nbsp;</p>
 </div>
 
