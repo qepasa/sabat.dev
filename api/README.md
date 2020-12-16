@@ -49,7 +49,7 @@
 </div>
 
 ## Overview
-### [[sabat.dev/api](https://sabat.dev/api)] main api endpoint *(as of current version)*
+### [[sabat.dev/api](https://sabat.dev/api)] - main api endpoint *(as of current version)*
 <p>&nbsp;</p>
 
 This is the official [sabat.dev](https://sabat.dev) api documentation. This api will always remain open and will not require stupid auth keys.  
