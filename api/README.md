@@ -24,7 +24,7 @@
         &nbsp;  
         <a href="https://github.com/Cloud11665/sabat.dev#testing">[Testing]</a>
         &nbsp;  
-        [<u>API documentation</u>]
+        [<code><u>API documentation</u></code>]
         &nbsp;  
         <a href="https://github.com/Cloud11665/sabat.dev/blob/master/LICENSE">[License]</a>
         &nbsp;  
