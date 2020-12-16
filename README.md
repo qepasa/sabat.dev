@@ -70,7 +70,7 @@ Using [pipenv](https://pipenv.pypa.io/en/latest)
 ```
 git clone https://github.com/Cloud11665/sabat.dev
 cd ./sabat.dev
-pipenv install
+pipenv install -r requirements.txt
 ```
 &nbsp;  
 &nbsp;   
