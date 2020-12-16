@@ -40,6 +40,7 @@
     </strong>
   </p>
   <p>&nbsp;</p>
+  <p>&nbsp;</p>
 </div>
 <!--Markdown only from now on ((`with some exceptions`))-->
 <!--
@@ -56,41 +57,58 @@
   <a href="https://github.com/Cloud11665/sabat.dev/blob/master/Pipfile.lock">
     <img src="https://img.shields.io/github/pipenv/locked/python-version/Cloud11665/sabat.dev">
   </a>
-</p>
+</p>-->
+
 ## Installation
-Standard python
+Using pip
 ```
 git clone https://github.com/Cloud11665/sabat.dev
 cd ./sabat.dev
 python -m pip install -r ./requirements.txt
 ```
-Pipenv
+
+Using [pipenv](https://pipenv.pypa.io/en/latest)
+
 ```
 git clone https://github.com/Cloud11665/sabat.dev
 cd ./sabat.dev
 pipenv install
 ```
+
 &nbsp;  
 &nbsp;   
+
 ## Deployment
+
 I use nginx, listening to port 5000 and gunicorn to serve the app.  
+
 &nbsp;  
+
 When running on something like [GNU screen](https://www.gnu.org/software/screen) or [tmux](https://github.com/tmux/tmux).
+
 ```
 python -m gunicorn --bind 127.0.0.1:5000 wsgi:app
 ```
+
 When running in the background.
+
 ```
 nohup python -m gunicorn --bind 127.0.0.1:5000 wsgi:app </dev/null >/dev/null 2>&1&
 ```
+
 &nbsp;  
 &nbsp;  
+
 ## Testing
+
 Run the whole API test suite. *(Requires the http server to be running on localhost)*
+
 ```
 pytest ./tests/*.py
 ```
+
 &nbsp;  
-&nbsp;  
+&nbsp; 
+
 ## Contributing
--->
+
