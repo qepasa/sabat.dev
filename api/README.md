@@ -16,7 +16,7 @@
     </a>
   </p>
   <h2></h2>
-    <h4>
+    <h3>
       <p align="center">
         <a href="https://github.com/Cloud11665/sabat.dev#installation">[Installation]</a>
         &nbsp;  
@@ -24,15 +24,15 @@
         &nbsp;  
         <a href="https://github.com/Cloud11665/sabat.dev#testing">[Testing]</a>
         &nbsp;  
-        <strong>
-                <a href="https://github.com/Cloud11665/sabat.dev/blob/master/api/README.md">[API documentation]</a>
-        </strong>
+        <u>
+            <a href="https://github.com/Cloud11665/sabat.dev/blob/master/api/README.md">[API documentation]</a>
+        </u>
         &nbsp;  
         <a href="https://github.com/Cloud11665/sabat.dev/blob/master/LICENSE">[License]</a>
         &nbsp;  
         <a href="https://github.com/Cloud11665/sabat.dev#contributing">[Contributing]</a>
       </p>
-    </h4>
+    </h3>
   <h2></h2>
   <p>&nbsp;</p>
   <p align="center">
