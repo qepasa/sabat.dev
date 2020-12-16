@@ -1,4 +1,8 @@
 name: build
+description: Build and lint on every push and pull request.
+branding:
+  icon: python
+  color: white
 
 on:
   push:

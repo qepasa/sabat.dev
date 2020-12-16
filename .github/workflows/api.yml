@@ -1,5 +1,9 @@
 name: API
-
+description: Run the whole API test suite.
+branding:
+  icon: flask
+  color: white
+  
 on:
   push:
     branches: [ master ]
