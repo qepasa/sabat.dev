@@ -83,7 +83,7 @@ def tta():
 			a = datetime.timedelta(hours=hours_start, minutes=minutes_start)
 			b = datetime.timedelta(hours=hours_stop, minutes=minutes_stop)
 
-			time_index = DB["VLO"]["TIME"]["MAP"][obj['starttime']]
+			time_index = int(DB["VLO"]["TIME"]["MAP"][obj['starttime']])
 
 			try:
 				color_ = obj['colors'][0]
