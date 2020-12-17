@@ -131,7 +131,7 @@ def tta():
 				'teacher': teach_,
 				'classroom': class_,
 				'color': color_,
-				'time_index': int(time_index),
+				'time_index': time_index,
 				'duration': duration,
 				'date': obj['date'],
 				'day_index': day_index,

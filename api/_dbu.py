@@ -90,7 +90,7 @@ def sync_db():
 	for time in resp_json["tables"][6]["data_rows"]:
 		x,_,_,_,y,z = time.values()
 		DB["VLO"]["TIME"]["DATA"][x] = {"begin":y,"end":z}
-		DB["VLO"]["TIME"]["MAP"][y] = x
+		DB["VLO"]["TIME"]["MAP"][y] = int(x)
 		DB["VLO"]["TIME"]["RMAP"][x] = y
 
 	with open("./api/db.json", "w", encoding="utf-8") as f:
