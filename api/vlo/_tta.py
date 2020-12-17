@@ -12,6 +12,7 @@ from api.__vars import *
 api = flask.blueprints.Blueprint('tta', __name__, url_prefix='/api')
 cache = flask_caching.Cache(config=CONFIG)
 
+
 @cache.cached()
 @api.route('/tta', methods=['GET'])
 def tta():
@@ -19,10 +20,10 @@ def tta():
 		if 'c' in flask.request.args.keys():
 			klass = flask.request.args['c'].upper()
 		else:
-			return flask.jsonify({"success":False,"error":"a"}), 406
+			return flask.jsonify({"success":False,"error":"No class url parameter."}), 406
 
-		if klass not in CLASS_KEY.keys():
-			return flask.jsonify({"success":False,"error":"b"}), 406
+		if klass not in DB["VLO"]["CLASS"]["IDR"].keys():
+			return flask.jsonify({"success":False,"error":f"{klass} not in class list"}), 406
 
 		if 'o' not in flask.request.args.keys():
 			offset = 0
@@ -32,16 +33,16 @@ def tta():
 		today = datetime.date.today()
 		year = today.year
 
-		last_monday = today + datetime.timedelta(days=-today.weekday(), weeks=0)
+		last_monday = today + datetime.timedelta(days=-today.weekday())
 		next_friday = last_monday + datetime.timedelta(days=4)
 
-		last_monday += datetime.timedelta(days=7*offset)
-		next_friday += datetime.timedelta(days=7*offset)
+		last_monday += datetime.timedelta(weeks=offset)
+		next_friday += datetime.timedelta(weeks=offset)
 
 		resp = requests.post(
-			URL_TT,
+			url="https://v-lo-krakow.edupage.org/timetable/server/currenttt.js?__func=curentttGetData",
 			headers={
-				'User-Agent': random.choice(AGENTS),
+				'User-Agent': random.choice(DB["AGENTS"]),
 				'Origin': 'https://v-lo-krakow.edupage.org',
 				'Referer': 'https://v-lo-krakow.edupage.org/substitution/'
 			},
@@ -53,7 +54,7 @@ def tta():
 						'datefrom': str(last_monday),
 						'dateto': str(next_friday),
 						'table': 'classes',
-						'id': CLASS_KEY[klass],
+						'id': DB["VLO"]["CLASS"]["IDR"][klass],
 						'showColors': True,
 						'showIgroupsInClasses': True,
 						'showOrig': True
@@ -69,7 +70,9 @@ def tta():
 			day_index = datetime.date(year_curr, month_curr, day_curr) - last_monday
 			day_index = day_index.days
 
-			if obj['starttime'] == '00:00' and obj['endtime'] == "24:00":
+			if int(obj['starttime'].split(':')[0]) < 7 and int(obj['endtime'].split(':')[0]) > 18:
+				#eg. "6:15" -> ["6","15"] -> "6" -> 6 < 7
+				#eg. "21:10" -> ["21","10"] -> "21" -> 21 > 18
 				obj['starttime'] = "7:10"
 				obj['endtime'] = "17:15"
 				obj['durationperiods'] = 11
@@ -80,7 +83,7 @@ def tta():
 			a = datetime.timedelta(hours=hours_start, minutes=minutes_start)
 			b = datetime.timedelta(hours=hours_stop, minutes=minutes_stop)
 
-			time_index = TIME_MAP[obj['starttime']]
+			time_index = DB["VLO"]["TIME"]["MAP"][obj['starttime']]
 
 			try:
 				color_ = obj['colors'][0]
@@ -91,18 +94,24 @@ def tta():
 				duration = int(obj['durationperiods'])
 			except:
 				duration = 1
+
 			try:
-				subj_ = SUBJECT_ID[obj['subjectid']]
+				subj_  = DB["VLO"]["SUBJECTS"]["ID"]["LONG"][obj['subjectid']]
+				subj_s = DB["VLO"]["SUBJECTS"]["ID"]["SHORT"][obj['subjectid']]
 			except:
-				subj_ = None
+				subj_  = None
+				subj_s = None
+
 			try:
-				teach_ = TEACHER_ID[obj['teacherids'][0]]
+				teach_ = DB["VLO"]["TEACHERS"]["ID"]["SHORT"][obj['teacherids'][0]]
 			except:
 				teach_ = None
+
 			try:
-				class_ = CLASSROOM_ID[obj['classroomids'][0]]
+				class_ = DB["VLO"]["CLASS"]["ROOM"]["ID"][obj['classroomids'][0]]
 			except:
 				class_ = None
+
 			try:
 				group_ = obj['groupnames'][0]
 			except:
@@ -118,6 +127,7 @@ def tta():
 
 			resp_json[i] = {
 				'subject': subj_,
+				'subject_short': subj_s,
 				'teacher': teach_,
 				'classroom': class_,
 				'color': color_,

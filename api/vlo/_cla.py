@@ -10,6 +10,4 @@ cache = flask_caching.Cache(config=CONFIG)
 @cache.cached()
 @api.route('/cla')
 def cla():
-	return flask.jsonify({"success":True,"resp":list(CLASS_KEY.keys())}), 200
-	#There is no good way to do this,
-	#since its all dependent on a lookup table.
+	return flask.jsonify({"success":True,"resp":list(DB["VLO"]["CLASS"]["ID"].values())}), 200

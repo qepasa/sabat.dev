@@ -41,7 +41,7 @@
   </p>
   <p align="center">  
     <a href="https://github.com/Cloud11665/sabat.dev/tree/master/api">
-      <img src="https://img.shields.io/badge/API%20version-1.1-EF30A1" width="150px">
+      <img src="https://img.shields.io/badge/API%20version-1.2-EF30A1" width="150px">
     </a>
   </p>
   <p>&nbsp;</p>
@@ -78,14 +78,14 @@ Each `lesson` has its `"classroom", "color", "date", "day_index", "duration", "s
 when number of elements in `resp[n][k]` is greater than one, it indicates that there are multiple lessons happening at once.
 ```json
 {
-    "success": true,
-    "resp": [
-        [[{...}],[{...},{...}]],
-        [[{...}],[{...}]],
-        [[{...}]],
-        [[{...}]],
-        [[{...}],[{...}],[{...}]]
-    ]
+  "success": true,
+  "resp": [
+    [[{...}],[{...},{...}]],
+    [[{...}],[{...}]],
+    [[{...}]],
+    [[{...}]],
+    [[{...}],[{...}],[{...}]]
+  ]
 }
 ```
 

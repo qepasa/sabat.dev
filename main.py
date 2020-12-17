@@ -4,9 +4,12 @@ import flask_cors
 import flask_caching
 
 import api
+import api.utils.fetch_db as fdb
 
 with open('./config.toml', 'r', encoding='utf-8') as cfg:
 	CONFIG = toml.load(cfg)
+
+fdb.sync_db()
 
 app = flask.Flask(__name__)
 flask_cors.CORS(app)
@@ -19,7 +22,9 @@ app.register_blueprint(api.cla)
 app.register_blueprint(api.doc)
 app.register_blueprint(api.sub)
 app.register_blueprint(api.tta)
+app.register_blueprint(api.tim)
 
+app.register_blueprint(api.dbu)
 #! Views
 
 @app.route('/')
@@ -45,4 +50,3 @@ def contact():
 
 if __name__ == '__main__':
 	app.run(debug=True)
-

@@ -20,31 +20,38 @@ def sub():
 		if 'c' in flask.request.args.keys():
 			klass = flask.request.args['c'].upper()
 		else:
-			return flask.jsonify({"success":False,"error":""}), 406
+			return flask.jsonify({"success":False,"error":"No class url parameter."}), 406
 
-		if klass not in CLASS_KEY.keys():
-			return flask.jsonify({"success":False,"error":""}), 406
+		if klass not in DB["VLO"]["CLASS"]["IDR"].keys():
+			return flask.jsonify({"success":False,"error":f"{klass} not in class list"}), 406
 
 		if 'o' not in flask.request.args.keys():
 			offset = 0
 		else:
 			offset = int(flask.request.args['o'])
 		
-		date_today = datetime.datetime.now() + offset*datetime.timedelta(days=1)
-		date_today = f"{date_today.year}-{str(date_today.month).rjust(2,'0')}-{str(date_today.day).rjust(2,'0')}"
+		date_today = datetime.datetime.today() + datetime.timedelta(days=offset)
+		#date_today = f"{date_today.year}-{str(date_today.month).rjust(2,'0')}-{str(date_today.day).rjust(2,'0')}"
 
 		resp = requests.post(
-			URL_RP,
+			"https://v-lo-krakow.edupage.org/substitution/server/viewer.js?__func=getSubstViewerDayDataHtml",
 			headers={
-				"User-Agent": random.choice(AGENTS),
+				"User-Agent": random.choice(DB["AGENTS"]),
 				"Origin": "https://v-lo-krakow.edupage.org",
 				"Referer": "https://v-lo-krakow.edupage.org/substitution/",
 			},
 			json={
-				"__args": [None, {"date": date_today, "mode": "classes"}],
+				"__args": [
+					None,
+					{
+						"date": str(date_today),
+						"mode": "classes"
+					}
+				],
 				"__gsh": "00000000",
 			},
 		)
+
 		classes = {}
 		resp_html = BeautifulSoup(resp.json()["r"], features="lxml")
 
