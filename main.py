@@ -32,9 +32,6 @@ app.register_blueprint(api.dbu)
 
 db = flask_sqlalchemy.SQLAlchemy(app)
 
-if not 'db.sqlite3' in os.listdir('.'):
-	db.create_all()
-
 class Request(db.Model):
 	__tablename__ = "request"
 
