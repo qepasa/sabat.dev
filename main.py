@@ -2,6 +2,8 @@ import toml
 import flask
 import flask_cors
 import flask_caching
+import flask_sqlalchemy
+import flask_statistics
 
 import api
 import api.utils.fetch_db as fdb
@@ -17,7 +19,7 @@ app.config.from_mapping(CONFIG)
 
 cache = flask_caching.Cache(app)
 
-#! API
+# API
 app.register_blueprint(api.cla)
 app.register_blueprint(api.doc)
 app.register_blueprint(api.sub)
@@ -25,8 +27,30 @@ app.register_blueprint(api.tta)
 app.register_blueprint(api.tim)
 
 app.register_blueprint(api.dbu)
-#! Views
 
+db = flask_sqlalchemy.SQLAlchemy(app)
+
+class Request(db.Model):
+	__tablename__ = "request"
+
+	index = db.Column(db.Integer, primary_key=True, autoincrement=True)
+	response_time = db.Column(db.Float)
+	date = db.Column(db.DateTime)
+	method = db.Column(db.String)
+	size = db.Column(db.Integer)
+	status_code = db.Column(db.Integer)
+	path = db.Column(db.String)
+	user_agent = db.Column(db.String)
+	remote_address = db.Column(db.String)
+	exception = db.Column(db.String)
+	referrer = db.Column(db.String)
+	browser = db.Column(db.String)
+	platform = db.Column(db.String)
+	mimetype = db.Column(db.String)
+
+statistics = flask_statistics.Statistics(app, db, Request)
+
+# Views
 @app.route('/')
 def home():
 	return flask.render_template('home.html')
