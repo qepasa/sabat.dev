@@ -11,6 +11,41 @@ body::-webkit-scrollbar {width: 0rem;}
 body::-webkit-scrollbar-track {background: var(--bg-mid)}
 body::-webkit-scrollbar-thumb {background: var(--accent-light)}
 
+.form-control {
+	color: var(--text-light);
+	background-color: var(--bg-dark);
+}
+
+.btn-c {
+  color: var(--text-light);
+  background-color: var(--accent-light);
+  border-color: var(--accent-light);
+    border: 1px solid #0000;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+    user-select: none;
+  text-align: center;
+  vertical-align: middle;
+display: inline-block;
+  cursor: pointer;
+  font-weight: 400;
+  transition: ease-in 0.15s;
+  /*ease-in-out, ease-in-out, ease-in-out, ease-in-out;*/
+}
+
+.btn-c::hover {
+  color: var(--text-light);
+  background-color: var(--accent-dark);
+  border-color: var(--accent-dark);
+  transition: ease-in 0.15s;
+}
+
+.table {
+  color: var(--text-light);
+  border: 1px solid var(--text-light);
+}
 
 .jss19 {
 	color: var(--text-light);
@@ -148,12 +183,6 @@ main {
 	height: 100vh;
 	font-weight: 700;
 	text-shadow: 0.5px 0.5px 0 #45966e;
-}
-
-a:link {
-	color: var(--accent-light);
-	background-color: transparent;
-	text-decoration: none;
 }
 
 a {

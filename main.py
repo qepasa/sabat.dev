@@ -3,7 +3,7 @@ import flask
 import flask_cors
 import flask_caching
 import flask_sqlalchemy
-import flask_statistics
+from lib import flask_statistics
 
 import api
 import api.utils.fetch_db as fdb
@@ -54,6 +54,10 @@ statistics = flask_statistics.Statistics(app, db, Request)
 @app.route('/')
 def home():
 	return flask.render_template('home.html')
+
+@app.route('/stats')
+def stats():
+	return flask.render_template('stats.html')
 
 @app.route('/static/<a>')
 def statics(a):
