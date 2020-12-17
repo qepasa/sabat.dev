@@ -94,7 +94,7 @@ def sync_db():
 		DB["VLO"]["TIME"]["RMAP"][x] = y
 
 	with open("./api/db.json", "w", encoding="utf-8") as f:
-		json.dump(DB,f,indent=2,ensure_ascii=False)
+		json.dump(DB,f,indent=2,ensure_ascii=False,sort_keys=True)
 
 	if __name__ != "__main__":
 		update()
