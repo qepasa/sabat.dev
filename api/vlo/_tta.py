@@ -127,11 +127,11 @@ def tta():
 
 			resp_json[i] = {
 				'subject': subj_,
-				#'subject_short': subj_s,
+				'subject_short': subj_s,
 				'teacher': teach_,
 				'classroom': class_,
 				'color': color_,
-				'time_index': time_index,
+				'time_index': int(time_index),
 				'duration': duration,
 				'date': obj['date'],
 				'day_index': day_index,
