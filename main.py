@@ -6,6 +6,7 @@ import flask_cors
 import flask_caching
 import flask_sqlalchemy
 from lib import flask_statistics
+from cache import cache
 
 import api
 import api.utils.fetch_db as fdb
@@ -19,7 +20,7 @@ app = flask.Flask(__name__)
 flask_cors.CORS(app)
 app.config.from_mapping(CONFIG)
 
-cache = flask_caching.Cache(app)
+cache.init_app(app)
 
 # API
 app.register_blueprint(api.cla)
