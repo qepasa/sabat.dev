@@ -10,4 +10,4 @@ cache = flask_caching.Cache(config=CONFIG)
 @cache.cached()
 @api.route('/cla')
 def cla():
-	return flask.jsonify({"success":True,"resp":list(DB["VLO"]["CLASS"]["ID"].values())}), 200
+	return flask.jsonify({"success":True,"resp":sorted(list(DB["VLO"]["CLASS"]["ID"].values()))}), 200
