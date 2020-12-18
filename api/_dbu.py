@@ -84,6 +84,8 @@ def sync_db():
 	#Classes
 	for klass in resp_json["tables"][3]["data_rows"]:
 		x,y,_ = klass.values()
+		x = x.upper()
+		y = y.upper()
 		DB["VLO"]["CLASS"]["ID"][x] = y
 		DB["VLO"]["CLASS"]["IDR"][y] = x
 
