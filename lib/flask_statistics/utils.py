@@ -59,10 +59,6 @@ class StatisticsQueries:
                     r.referrer = r.referrer.split('://')[1]
                     if '/' in r.referrer:
                         r.referrer = r.referrer.split('/')[0]
-                else:
-                    r.referrer = None
-
-        
 
         return q
 
