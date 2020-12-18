@@ -12,9 +12,8 @@ from api.__vars import *
 api = flask.blueprints.Blueprint('tta', __name__, url_prefix='/api')
 cache = flask_caching.Cache(config=CONFIG)
 
-
-@cache.cached()
 @api.route('/tta', methods=['GET'])
+@cache.cached(timeout=600)
 def tta():
 	try:
 		if 'c' in flask.request.args.keys():

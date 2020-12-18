@@ -13,8 +13,8 @@ from api.__vars import *
 api = flask.blueprints.Blueprint('sub', __name__, url_prefix='/api')
 cache = flask_caching.Cache(config=CONFIG)
 
-@cache.cached()
 @api.route('/sub', methods=['GET'])
+@cache.cached(timeout=600)
 def sub():
 	try:
 		if 'c' in flask.request.args.keys():
