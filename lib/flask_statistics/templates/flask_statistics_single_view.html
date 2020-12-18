@@ -27,11 +27,11 @@
       <thead>
         <tr>
           <th>URL</th>
+          <th>Refferer</th>
           <th>Method</th>
-          <th>Mimetype</th>
           <th>Status</th>
-          <th>Size</th>
           <th>Duration</th>
+          <th>OS</th>
           <th>Date</th>
         </tr>
       </thead>
@@ -39,8 +39,8 @@
         {%- for request in requests -%}
         <tr>
           <td>{{request.path}}</td>
+          <td>{{request.referrer}}</td>
           <td>{{request.method}}</td>
-          <td>{{request.mimetype}}</td>
           <td>
             {%- set status = request.status_code -%}
             {%- if 200 <= status < 300 -%}
@@ -51,8 +51,8 @@
               {{status}}
             {%- endif -%}
           </td>
-          <td>{{request.size|filesizeformat}}</td>
           <td>{{request.response_time|round(5)}} s</td>
+          <td>{{request.platform}}</td>
           <td>{{request.date.strftime("%Y-%m-%d %H:%M:%S")}}</td>
         </tr>
         {%- endfor -%}

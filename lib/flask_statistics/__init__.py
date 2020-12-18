@@ -1,6 +1,7 @@
 import datetime
 import time
 
+import requests as rqs
 from flask import Flask, Response, g, request, render_template, Blueprint
 from flask_sqlalchemy import SQLAlchemy
 from flask_sqlalchemy import Model
@@ -115,7 +116,8 @@ class Statistics:
                                requests=requests,
                                user_chart_data=user_chart_data,
                                start_date=str(start_date.date()),
-                               end_date=str(end_date.date()))
+                               end_date=str(end_date.date())
+                               )
 
     def before_request(
         self
@@ -194,10 +196,11 @@ class Statistics:
             # exception (if there was one)
             obj["exception"] = None if exception is None else repr(exception)
 
-            """
+            
             # Gets geo data based of ip
+            """
             url = "https://freegeoip.app/json/{0}".format(request.remote_addr)
-            with requests.get(url) as req:
+            with rqs.get(url) as req:
                 if req.status_code != 403:  # 403 means rate limted was reached
                     resp = req.json()
 
