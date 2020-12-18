@@ -195,8 +195,8 @@ class Statistics:
             obj["mimetype"] = g.mimetype
             # exception (if there was one)
             obj["exception"] = None if exception is None else repr(exception)
-
-            
+            # args
+            obj["params"] = ", ".join([f"{x}={request.args[x]}" for x in request.args.keys()])
             # Gets geo data based of ip
             """
             url = "https://freegeoip.app/json/{0}".format(request.remote_addr)

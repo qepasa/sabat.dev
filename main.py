@@ -36,6 +36,7 @@ class Request(db.Model):
 	__tablename__ = "request"
 
 	index = db.Column(db.Integer, primary_key=True, autoincrement=True)
+	params = db.Column(db.String)
 	response_time = db.Column(db.Float)
 	date = db.Column(db.DateTime)
 	method = db.Column(db.String)

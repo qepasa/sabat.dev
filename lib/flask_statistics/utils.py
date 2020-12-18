@@ -62,6 +62,7 @@ class StatisticsQueries:
                 else:
                     r.referrer = None
 
+        
 
         return q
 

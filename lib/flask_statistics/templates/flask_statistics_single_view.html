@@ -27,6 +27,7 @@
       <thead>
         <tr>
           <th>URL</th>
+          <th>Params</th>
           <th>Refferer</th>
           <th>Method</th>
           <th>Status</th>
@@ -39,6 +40,7 @@
         {%- for request in requests -%}
         <tr>
           <td>{{request.path}}</td>
+          <td>{{request.params}}</td>
           <td>{{request.referrer}}</td>
           <td>{{request.method}}</td>
           <td>
